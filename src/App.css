@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+.my-container {
+  position: relative;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navigation {
   color: white;
+  position: fixed;
+  width: 260px;
+  height: 100%;
+  background-color: #003147;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.navigation ul li {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navigation ul li:hover {
+  border: 1px solid #1a237e;
+  background: #32a8e3;
+  color: #000;
+  box-shadow: 7px 7px #1a237e;
+  border-radius: 5px;
+  transition: ease 0.3s;
+}
+.active-button {
+  border: 1px solid #1a237e;
+  background: #32a8e3;
+  color: #000;
+  box-shadow: 7px 7px #1a237e;
+  border-radius: 5px;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.main {
+  position: absolute;
+  width: calc(100% - 260px);
+  left: 260px;
+  min-height: 100vh;
+  background: #f5f5f5;
+  transition: 0.5s;
+  /* background-color: #003147; */
+}
+
+.main .topbar {
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail.admin {
+  padding: 20px;
+}
+
+.detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.detail table thead td {
+  font-weight: 600;
+}
+
+.detail .listUser table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.detail .listUser table tr:last-child {
+  border-bottom: none;
+}
+.detail .listUser table tbody tr:hover {
+  background-color: #03a9f4;
+  color: #fff;
+}
+.detail .listUser table thead tr td:last-child,
+.detail .listUser table tbody tr td:last-child {
+  text-align: right;
+}
+
+.detail table tr:hover {
+  background: #03a9f4;
+  color: #fff;
+}
+.detail table {
+  padding: 5px;
+}
+
+.content {
+  border-radius: 5px;
+  margin: 0;
+  color: #000;
+  background: #32a8e3;
+  color: #fff;
+  /* // padding: 20px 20px 20px 10px; */
+  padding: 10px;
+  margin-left: 15px;
+  box-shadow: 7px 7px 1px #1a237e;
 }

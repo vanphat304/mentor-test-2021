@@ -1,0 +1,2 @@
+export const POST_USER_LOGIN = "POST_USER_LOGIN";
+export const POST_LIST_USER = "POST_LIST_USER";
